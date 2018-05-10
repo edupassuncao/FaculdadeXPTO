@@ -1,4 +1,4 @@
-- Estamos utilizando uma base de dados que fica em memória, logo o primeiro passo é fazer uma carga na minha base de dados.
+- Estamos utilizando uma base de dados que fica em memória, logo o primeiro passo é fazer uma carga inicial na minha base de dados.
 
  http://localhost:59009/api/toggler (POST)
 
