@@ -29,7 +29,7 @@ namespace TogglerService.Authentication
 
 
         public override Task OnAuthorizationAsync(Microsoft.AspNetCore.Mvc.Filters.AuthorizationFilterContext context)
-        {
+        { 
             base.OnAuthorizationAsync(context);
             
             

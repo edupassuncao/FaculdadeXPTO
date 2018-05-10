@@ -100,7 +100,7 @@ namespace TogglerService.Controllers
 
         // GET: api/Toggler
         [HttpGet]
-        [Authorize]
+        [AllowAnonymous]
         public IEnumerable<Toggler> GetToggler()
         {            
             return _context.Toggler;
