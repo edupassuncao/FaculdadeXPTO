@@ -174,8 +174,8 @@ namespace TogglerService.Controllers
             _context.Toggler.AddRange(togglerList);            
 
             await _context.SaveChangesAsync();
-            return null;
-           // return CreatedAtAction("GetToggler", new { id = toggler.Id }, toggler);
+            
+            return CreatedAtAction("GetToggler", new { id = togglerList.FirstOrDefault().Id }, togglerList);
         }
 
         // DELETE: api/Toggler/5
