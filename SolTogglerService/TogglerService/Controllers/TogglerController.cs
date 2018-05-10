@@ -163,25 +163,19 @@ namespace TogglerService.Controllers
         // POST: first load in the database
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> PostToggler([FromBody] Toggler toggler)
+        public async Task<IActionResult> PostToggler([FromBody] List<Toggler> togglerList)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var togglerList = new List<Toggler>()
-            {
-                new Toggler() { Id = 1, NameButton = "isButtonBlue", Allowed = "", Restricted = "Service ABC", IsOn  = true },
-                new Toggler() { Id = 2, NameButton = "isButtonGreen", Allowed = "Service ABC", Restricted = "",IsOn = true },
-                new Toggler() { Id = 3, NameButton = "isButtonRed", Allowed = "", Restricted = "Service ABC", IsOn = true }
-            };
 
             _context.Toggler.AddRange(togglerList);            
 
             await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetToggler", new { id = toggler.Id }, toggler);
+            return null;
+           // return CreatedAtAction("GetToggler", new { id = toggler.Id }, toggler);
         }
 
         // DELETE: api/Toggler/5
