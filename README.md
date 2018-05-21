@@ -36,6 +36,8 @@ Content-Type: application/json;
 }
 ]
 
+
+
 -  Conforme o comportameno dos interruptores as alterações de permissão de acesso ao serviço irão se modificando.
 
  
